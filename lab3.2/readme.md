@@ -1,8 +1,8 @@
-#Table per concrete class with unions
+# Table per concrete class with unions
 
 consider a union subclass mapping with BillingDetails as an abstract class (or interface),
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/36b5a7a3-6edd-4141-953c-8937c6a743df/Untitled.png)
+![image](https://user-images.githubusercontent.com/119105101/224613802-9ef1e9e8-f02c-4a64-a391-1898484c183a.png)
 
 ### Super Class
 
