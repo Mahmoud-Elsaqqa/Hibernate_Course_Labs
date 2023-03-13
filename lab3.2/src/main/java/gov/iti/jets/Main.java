@@ -19,6 +19,7 @@ public class Main {
         student1.setLastName("fathy");
         student1.setDepartment("science");
 
+        //Polymorphism
         Person student2 = new Student();
 
         transaction.begin();
