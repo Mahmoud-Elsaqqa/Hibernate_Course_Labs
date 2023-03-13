@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("lab3.1");
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("lab3.4");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
 
@@ -27,19 +27,19 @@ public class Main {
         teacher1.setHireDate(new Date());
 
 
-        //Polymorphism
-//        cannot resolve Person, Because of Tbale Per Concrete Class Inheritance (No Database Polymorphism)
-//        String jpql = "SELECT p FROM Person p";
+        //Only One Table and Only one Select Query
+        String jpql = "SELECT p FROM Person p";
 
         transaction.begin();
         entityManager.persist(student1);
         entityManager.persist(teacher1);
 
-        //Note The Union Select in SQL Query in the output
+        //Note That only one select query is performed on only on table "Person Table"
+        TypedQuery<Person> query = entityManager.createQuery(jpql, Person.class);
+        List<Person> results = query.getResultList();
         //Select Query:
         transaction.commit();
-        Student st1 = entityManager.find(Student.class,1);
-        System.out.println(st1);
-   }
+        System.out.println(results);
+    }
 }
 

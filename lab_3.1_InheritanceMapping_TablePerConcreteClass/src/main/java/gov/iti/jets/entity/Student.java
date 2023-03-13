@@ -3,12 +3,11 @@ package gov.iti.jets.entity;
 import jakarta.persistence.*;
 
 @Entity(name = "student")
-@Table(name = "students", schema = "school")
+@Table(name = "student", schema = "lab3.3")
 public class Student extends Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
 
     public String getDepartment() {
         return department;

@@ -10,6 +10,7 @@
         <module name="lab_3.3_InheritanceMapping_TablePerClassHierarchy" />
         <module name="lab_3.2_InheritanceMapping_TablePerConcreteClass_Unions" />
         <module name="lab_3.1_InheritanceMapping_TablePerConcreteClass" />
+        <module name="lab_3.4_InheritanceMapping_TablePerSubClass" />
         <module name="lab_2" />
       </profile>
     </annotationProcessing>

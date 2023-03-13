@@ -14,6 +14,7 @@
         <module>lab_3.1_InheritanceMapping_TablePerConcreteClass</module>
         <module>lab_3.2_lab_3.2_InheritanceMapping_TablePerConcreteClass_Unions</module>
         <module>lab_3.3_InheritanceMapping_TablePerClassHierarchy</module>
+        <module>lab_3.4_InheritanceMapping_TablePerSubClass</module>
     </modules>
 
     <properties>

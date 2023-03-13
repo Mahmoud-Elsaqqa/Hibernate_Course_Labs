@@ -5,11 +5,8 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity(name = "teacher")
-@Table(name = "teachers", schema = "lab3.3")
+@Table(name = "teachers", schema = "lab3.4")
 public class Teacher extends Person {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
 
     @Column(name = "hire_date")
     private Date hireDate;
@@ -22,11 +19,12 @@ public class Teacher extends Person {
         this.hireDate = hireDate;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getId() {
-        return id;
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "hireDate=" + hireDate +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
     }
 }

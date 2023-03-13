@@ -3,9 +3,8 @@ package gov.iti.jets.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Person", schema = "lab3.3")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "person_type")
+@Table(name = "Person", schema = "lab3.4")
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Person {
 
     @Id
