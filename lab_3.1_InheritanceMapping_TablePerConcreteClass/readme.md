@@ -6,7 +6,7 @@
 
 works by exactly one mapping table for each concrete class. You can map all properties of a class, including inherited properties.
 
-![Untitled](ORM%20Mapping%20Inheritance%20774467c954a2409caacfe79eab3c8c4d/Untitled.png)
+![image](https://user-images.githubusercontent.com/119105101/224608554-992942c9-056e-46e2-b013-77842c2486ee.png)
 
 ### Super Class
 
