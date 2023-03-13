@@ -3,7 +3,7 @@ This method works by mapping an entire class hierarchy to a single database tabl
 
 This table includes columns for all properties of all classes in the hierarchy. The value of an extra type discriminator column or formula identifies the concrete subclass represented by a particular row.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/40d1be0a-b246-4f28-802f-6a316c01f20f/Untitled.png)
+![image](https://user-images.githubusercontent.com/119105101/224630130-e2a7641c-f815-44e7-be8a-055d96788b3b.png)
 
 This strategy is the best-performing way to represent polymorphism—both polymorphic and nonpolymorphic queries perform well—and it’s even easy to write queries by hand.
 
