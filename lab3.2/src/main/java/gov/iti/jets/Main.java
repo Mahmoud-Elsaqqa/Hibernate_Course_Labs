@@ -2,8 +2,10 @@ package gov.iti.jets;
 
 import gov.iti.jets.entity.Person;
 import gov.iti.jets.entity.Student;
+import gov.iti.jets.entity.Teacher;
 import jakarta.persistence.*;
 
+import java.util.Date;
 import java.util.List;
 
 public class Main {
@@ -18,11 +20,19 @@ public class Main {
         student1.setLastName("fathy");
         student1.setDepartment("science");
 
+        Teacher teacher1 = new Teacher();
+        //f_name and l_name attributes are inherited from Person Class
+        teacher1.setFirstName("Ali");
+        teacher1.setLastName("Sobhy");
+        teacher1.setHireDate(new Date());
+
+
         //Polymorphism
         String jpql = "SELECT p FROM Person p";
 
         transaction.begin();
         entityManager.persist(student1);
+        entityManager.persist(teacher1);
 
         //Note The Union Select in SQL Query in the output
         TypedQuery<Person> query = entityManager.createQuery(jpql, Person.class);

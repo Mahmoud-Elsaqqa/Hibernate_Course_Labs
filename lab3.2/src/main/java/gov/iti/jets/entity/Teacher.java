@@ -19,4 +19,12 @@ public class Teacher extends Person {
         this.hireDate = hireDate;
     }
 
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "hireDate=" + hireDate +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
+    }
 }
