@@ -1,3 +1,5 @@
+#Table per concrete class with unions
+
 consider a union subclass mapping with BillingDetails as an abstract class (or interface),
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/36b5a7a3-6edd-4141-953c-8937c6a743df/Untitled.png)
@@ -35,13 +37,13 @@ public class CreditCard extends BillingDetails {
 
 <aside>
 📢 Keep in mind that the SQL schema still isn’t aware of the inheritance; the tables look exactly alike as in figure
-
 </aside>
+
 
 <aside>
 ✅ If BillingDetails were concrete, you’d need an additional table to hold instances. We have to emphasize again that there is still no relationship between the database tables, except for the fact that they have some (many) similar columns.
-
 </aside>
+
 
 The advantages of this mapping strategy are clearer if we examine polymorphic queries. For example, the query select bd from BillingDetails bd generates the following SQL statement:
 
