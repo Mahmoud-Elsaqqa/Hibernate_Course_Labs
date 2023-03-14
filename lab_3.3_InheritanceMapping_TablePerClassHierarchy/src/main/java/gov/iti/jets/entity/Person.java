@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "Person", schema = "lab3.3")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "person_type")
+//@DiscriminatorColumn(name = "person_type")
 public abstract class Person {
 
     @Id

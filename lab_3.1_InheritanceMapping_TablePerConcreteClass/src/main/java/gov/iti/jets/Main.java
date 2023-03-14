@@ -29,7 +29,7 @@ public class Main {
 
         //Polymorphism
 //        cannot resolve Person, Because of Tbale Per Concrete Class Inheritance (No Database Polymorphism)
-//        String jpql = "SELECT p FROM Person p";
+        String jpql = "SELECT p FROM Person p";
 
         transaction.begin();
         entityManager.persist(student1);
@@ -37,6 +37,8 @@ public class Main {
 
         //Note The Union Select in SQL Query in the output
         //Select Query:
+        TypedQuery<Object> query = entityManager.createQuery(jpql, Object.class);
+        List<Object> results = query.getResultList();
         transaction.commit();
         Student st1 = entityManager.find(Student.class,1);
         System.out.println(st1);

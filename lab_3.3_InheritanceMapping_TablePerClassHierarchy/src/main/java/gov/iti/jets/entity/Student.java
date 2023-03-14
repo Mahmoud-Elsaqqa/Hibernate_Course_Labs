@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity(name = "student")
 @Table(name = "student", schema = "lab3.3")
-@DiscriminatorValue("student")
+//@DiscriminatorValue("student")
 public class Student extends Person {
 
     @Column(name = "dept")
